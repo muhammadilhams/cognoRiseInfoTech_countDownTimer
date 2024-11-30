@@ -1,0 +1,153 @@
+/* CSS untuk Countdown Timer */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #00233D;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    color: #e0f2fe;
+    text-align: center; /* Menengahkan secara horizontal */
+    width: 100%; /* Pastikan elemen mengambil lebar penuh */
+    margin: 0;
+    padding: 5% 5%; /* Menghilangkan margin default */
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border: solid 2px #E0E09E;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width:auto;
+    
+}
+
+label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #e0f2fe;
+}
+
+input[type="date"],
+input[type="time"] {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #476681;
+    color: #fbfbfb;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border: 2px solid #E0E09E;
+    background-color: #1e3a58;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#startButton:hover {
+    background: #2563eb;
+}
+
+#resetButton {
+    background: #df6060;
+}
+
+#resetButton:hover {
+    background: #d52e2e;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    
+    gap: 15px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: auto;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 3em;
+    color: #e0f2fe;
+    font-weight: bold;
+}
+
+.countdown-item label {
+    font-size: 1em;
+    color: #93c5fd;
+}
+
+.default-message {
+    font-size: 1.2em;
+    color: #f0f9ff;
+    margin-top: 10px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    form {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    #countdown {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .countdown-item {
+        margin-bottom: 10px;
+    }
+
+    .countdown-item:last-child {
+        margin-bottom: 0;
+    }
+}
